@@ -21,7 +21,7 @@ import static android.content.pm.PackageManager.GET_ACTIVITIES;
 
 public class InstalledApplicationsListPreference extends ListPreference {
 
-  private int selectedApplicationIndex;
+  private int selectedApplicationIndex = 0;
   private PackageManager packageManager;
 
   public InstalledApplicationsListPreference(final Context context, final AttributeSet attrs) {
@@ -60,7 +60,7 @@ public class InstalledApplicationsListPreference extends ListPreference {
   @Override
   public void setEntries(final CharSequence[] entries) {
     super.setEntries(entries);
-    selectedApplicationIndex = -1;
+    selectedApplicationIndex = 0;
   }
 
   @Override
